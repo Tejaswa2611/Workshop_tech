@@ -39,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^4.0.3
   glassmorphism: ^3.0.0
+  curved_navigation_bar: ^1.0.3
 
 dev_dependencies:
   flutter_test:
@@ -89,6 +90,8 @@ flutter:
     - lib\images\STARTUP_WORKSHOP.png
     - lib\images\stocks.png
     - lib\images\Web2.png
+    - lib\images\Typeface.png
+    - lib\images\Techkriti_logo_White.png
   #   - images/a_dot_ham.jpeg
   
 

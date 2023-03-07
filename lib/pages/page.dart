@@ -23,6 +23,7 @@ import 'StartupWorkshop.dart';
 import 'StockInvestment.dart';
 import 'WebDevelopment.dart';
 import 'crypto.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class WorkPage extends StatelessWidget {
   const WorkPage({super.key});
@@ -30,6 +31,21 @@ class WorkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+        backgroundColor: const Color(0xFF0A1E21),
+        title: Image.asset('lib\\images\\Typeface.png',height: 100),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Icon(Icons.more_vert),
+          ),
+          Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Icon(Icons.notifications),
+          ),
+
+        ],
+      ),
         body: Container(
       decoration: const BoxDecoration(
         color: Color(0xffffffff),
@@ -44,114 +60,108 @@ class WorkPage extends StatelessWidget {
         children: [
           Container(
             // color: Colors.amber,
-            height: 150,
+            height: 120,
             // width: 100,
             child: const Center(
-              child: Padding(
-                padding: EdgeInsets.only(top: 70.0),
-                child: Text("Workshops",
-                    style: TextStyle(
-                      fontSize: 40,
-                      color: Colors.white,
-                    )),
-              ),
+              child: Text("Workshops",
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white,
+                  )),
             ),
           ),
           Expanded(
             child: GridView.extent(
               // shrinkWrap: true,
+              // physics: ,             
               maxCrossAxisExtent: 300,
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
               childAspectRatio: 1 / 1.6,
               children: [
-                Container(
-                  // color:Colors.amber,
-                  child: Card(
-                    
-                    color: Colors.white.withOpacity(0.2),
-                    shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                    child: InkWell(
-                      // onTap: () => ,
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: 6.0, left: 6.0, right: 6.0),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Image.asset('lib\\images\\Crypto.jpg',
-                                  height: 250, fit: BoxFit.fill),
-                            ),
+                Card(                    
+                  color: Colors.white.withOpacity(0.2),
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                  child: InkWell(
+                    // onTap: () => ,
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 6.0, left: 6.0, right: 6.0),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.asset('lib\\images\\Crypto.jpg',
+                                height: 250, fit: BoxFit.fill),
                           ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.only(top: 8.0, bottom: 3.0),
-                            child: Container(
-                              // color: Colors.amber,
-                              height: 80,
-                              // width: 120,
-                              child: const Center(
-                                child: Text(
-                                  'CRYPTO CURRENCY',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.white,
-                                  ),
+                        ),
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(top: 8.0, bottom: 3.0),
+                          child: Container(
+                            // color: Colors.amber,
+                            height: 80,
+                            // width: 120,
+                            child: const Center(
+                              child: Text(
+                                'CRYPTO CURRENCY',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
                           ),
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) {
-                                  return const Crypto();
-                                }),
-                              );
-                            },
-                            child: Container(
-                                height: 40,
-                                width: 190,
-                                decoration: BoxDecoration(
-                                  boxShadow:   const [
-                                    BoxShadow(
-                                      color: Color.fromARGB(255, 30, 24, 24),
-                                      blurRadius: 10.0, // soften the shadow
-                                      spreadRadius: 1.0, //extend the shadow
-                                      offset: Offset(
-                                        1.0, // Move to right 5  horizontally
-                                        1.0, // Move to bottom 5 Vertically
-                                      ),
-                                    )
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) {
+                                return const Crypto();
+                              }),
+                            );
+                          },
+                          child: Container(
+                              height: 40,
+                              width: 190,
+                              decoration: BoxDecoration(
+                                boxShadow:   const [
+                                  BoxShadow(
+                                    color: Color.fromARGB(255, 30, 24, 24),
+                                    blurRadius: 10.0, // soften the shadow
+                                    spreadRadius: 1.0, //extend the shadow
+                                    offset: Offset(
+                                      1.0, // Move to right 5  horizontally
+                                      1.0, // Move to bottom 5 Vertically
+                                    ),
+                                  )
+                                ],
+                                borderRadius: BorderRadius.circular(5),
+                                gradient: const LinearGradient(
+                                  begin: Alignment(0.7, -1),
+                                  end: Alignment(-0.65, 1),
+                                  colors: <Color>[
+                                    Color(0xffb75cff),
+                                    Color(0xff671ae4)
                                   ],
-                                  borderRadius: BorderRadius.circular(5),
-                                  gradient: const LinearGradient(
-                                    begin: Alignment(0.7, -1),
-                                    end: Alignment(-0.65, 1),
-                                    colors: <Color>[
-                                      Color(0xffb75cff),
-                                      Color(0xff671ae4)
-                                    ],
-                                    stops: <double>[0, 1],
-                                  ),
+                                  stops: <double>[0, 1],
                                 ),
-                                child: const Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Center(
-                                      child: Text(
-                                    'Explore',
-                                    style: TextStyle(
-                                        fontSize: 20, color: Colors.white),
-                                  )),
+                              ),
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Center(
+                                    child: Text(
+                                  'Explore',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
                                 )),
-                          )
-                        ],
-                      ),
+                              )),
+                        )
+                      ],
                     ),
                   ),
                 ),
@@ -2137,6 +2147,44 @@ class WorkPage extends StatelessWidget {
           ),
         ],
       ),
-    ));
+    ),
+  extendBody: true,
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        color: const Color(0xFF0A1E21).withOpacity(0.5),
+        animationDuration: const Duration(milliseconds: 300),
+        onTap: (index){
+          print(index);
+        },
+        items: [
+          const Icon(
+            Icons.home,
+            color: Colors.white,
+            size: 30,
+
+          ),
+          const Icon(
+            Icons.stacked_bar_chart,
+            color: Colors.white,
+            size: 30,
+          ),
+          const Icon(
+            Icons.add,
+            color: Colors.white,
+            size: 30,
+          ),
+          const Icon(
+            Icons.search,
+            color: Colors.white,
+            size: 30,
+          ),
+          const Icon(
+            Icons.person,
+            color: Colors.white,
+            size: 30,
+          ),
+        ],
+      ),
+    );
   }
 }

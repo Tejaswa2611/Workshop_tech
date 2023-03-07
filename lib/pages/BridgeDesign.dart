@@ -22,57 +22,59 @@ class _BridgeDesignState extends State<BridgeDesign> {
                 stops: <double>[0, 0.825],
               ),
             ),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 300,
-                    width: double.infinity,
-                    // color: Colors.amber,
-                    child: const Center(
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 75.0),
-                        child: Text("Bridge Design",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 50, color: Colors.white)),
-                      ),
-                    ),
-                  ),
-                ),
-                FractionallySizedBox(
-                  alignment: Alignment.center,
-                  widthFactor: 0.7,
-                  child: Container(
-                    color: Colors.white.withOpacity(0.2),
-                    height: 550,
-                    child: const Padding(
-                      padding: EdgeInsets.all(30.0),
-                      child: SingleChildScrollView(
-                        child: Text(
-                          "Bridge Design is an essential point of concentrate in Civil Engineering. In the Bridge Design Workshop, Understudies will be acquainted with different kinds of extensions and moving loads. Members will plan and manufacture their own bridge and test for the most extreme burden. The primary goal is to display useful and practical strategies for assessing, reviewing, reinforcing and restoring spans & talks about extension substructure frameworks, features the more specialized parts of bridge substructure plan and restoration. The workshop includes guidance for the key basic segments of Structural designing and bridge development – beams, arches, trusses, suspensions, and test for maximum load. Concentrating on segments including and influencing span substructures, this workshop tends to the different sorts of every part and talks about explicit determination or plan criteria, with accentuation on both conventional and imaginative functional arrangements in proficient applications.",
-                          style: TextStyle(fontSize: 17.6, color: Colors.white),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 300,
+                      width: double.infinity,
+                      // color: Colors.amber,
+                      child: const Center(
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 75.0),
+                          child: Text("Bridge Design",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 50, color: Colors.white)),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  // color: Colors.red,
-                  width: 400,
-                  height: 150,
-                  alignment: Alignment.center,
-                  child: Container(
-                    width: 230,
-                    height: 45,
-                    decoration: BoxDecoration(
-                      color: const Color(0xff40acab),
-                      borderRadius: BorderRadius.circular(10),
+                  FractionallySizedBox(
+                    alignment: Alignment.center,
+                    widthFactor: 0.7,
+                    child: Container(
+                      color: Colors.white.withOpacity(0.2),
+                      height: 550,
+                      child: const Padding(
+                        padding: EdgeInsets.all(30.0),
+                        child: SingleChildScrollView(
+                          child: Text(
+                            "Bridge Design is an essential point of concentrate in Civil Engineering. In the Bridge Design Workshop, Understudies will be acquainted with different kinds of extensions and moving loads. Members will plan and manufacture their own bridge and test for the most extreme burden. The primary goal is to display useful and practical strategies for assessing, reviewing, reinforcing and restoring spans & talks about extension substructure frameworks, features the more specialized parts of bridge substructure plan and restoration. The workshop includes guidance for the key basic segments of Structural designing and bridge development – beams, arches, trusses, suspensions, and test for maximum load. Concentrating on segments including and influencing span substructures, this workshop tends to the different sorts of every part and talks about explicit determination or plan criteria, with accentuation on both conventional and imaginative functional arrangements in proficient applications.",
+                            style: TextStyle(fontSize: 17.6, color: Colors.white),
+                          ),
+                        ),
+                      ),
                     ),
-                      child: const Center(child: Text("REGISTER",style: TextStyle(fontSize: 20, color: Colors.white), textAlign: TextAlign.center,))
                   ),
-                ),
-              ],
+                  Container(
+                    // color: Colors.red,
+                    width: 400,
+                    height: 150,
+                    alignment: Alignment.center,
+                    child: Container(
+                      width: 230,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        color: const Color(0xff40acab),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                        child: const Center(child: Text("REGISTER",style: TextStyle(fontSize: 20, color: Colors.white), textAlign: TextAlign.center,))
+                    ),
+                  ),
+                ],
+              ),
             )));
   }
 }

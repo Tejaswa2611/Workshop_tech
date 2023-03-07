@@ -57,19 +57,21 @@ class _ProductManagementState extends State<ProductManagement> {
                     ),
                   ),
                 ),
-                Container(
-                  // color: Colors.red,
-                  width: 400,
-                  height: 150,
-                  alignment: Alignment.center,
+                SingleChildScrollView(
                   child: Container(
-                    width: 230,
-                    height: 45,
-                    decoration: BoxDecoration(
-                      color: const Color(0xff40acab),
-                      borderRadius: BorderRadius.circular(10),
+                    // color: Colors.red,
+                    width: 400,
+                    height: 150,
+                    alignment: Alignment.center,
+                    child: Container(
+                      width: 230,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        color: const Color(0xff40acab),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                        child: const Center(child: Text("REGISTER",style: TextStyle(fontSize: 20, color: Colors.white), textAlign: TextAlign.center,))
                     ),
-                      child: const Center(child: Text("REGISTER",style: TextStyle(fontSize: 20, color: Colors.white), textAlign: TextAlign.center,))
                   ),
                 ),
               ],
